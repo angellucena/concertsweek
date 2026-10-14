@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concerts Week | Próximos Conciertos</title>
+    <!-- SEO On-Page: Title específico para la sección de cartelera -->
+    <title>Próximos Conciertos y Cartelera de Recitales | Concerts Week</title>
+    <!-- SEO On-Page: Meta Description -->
+    <meta name="description"
+        content="Explora la cartelera completa de próximos conciertos en Argentina. Encuentra información sobre Lollapalooza 2027, Slipknot en Movistar Arena y Foo Fighters en River Plate.">
+    <meta name="robots" content="index, follow">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Hoja de Estilos Externa Personalizada -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Estilos CSS Compilados desde SCSS -->
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR DE BOOTSTRAP CON MENÚ HAMBURGUESA -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Navegación principal del sitio">
             <div class="container-fluid max-w-7xl">
-                <a class="navbar-brand brand-title" href="../index.html">Concerts<span class="brand-accent">Week</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand brand-title" href="../index.html" aria-label="Concerts Week - Ir a inicio">
+                    Concerts<span class="brand-accent">Week</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active-page" href="conciertos.html">Próximos Conciertos</a></li>
+                        <li class="nav-item"><a class="nav-link active-page" href="conciertos.html"
+                                aria-current="page">Próximos Conciertos</a></li>
                         <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="galeria.html">Galería y Música</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -37,51 +52,64 @@
     </header>
 
     <main class="main-content">
-        <section class="content-section">
-            <h1>Próximos Conciertos de la Semana</h1>
-            <p>Consulta la lista de eventos programados con sus recintos y detalles de acceso.</p>
+        <!-- ÚNICO H1 DEL ARCHIVO -->
+        <section class="content-section" data-aos="fade-down" data-aos-duration="800">
+            <article>
+                <h1>Cartelera de Próximos Conciertos y Recitales</h1>
+                <p>Consulta las fechas confirmadas, estadios, recintos e información de tickets para los principales
+                    shows internacionales en el país.</p>
+            </article>
         </section>
 
-        <section class="content-section">
-            <h2>Cartelera Destacada</h2>
-            
-            <section class="row g-4 mt-1">
-                <!-- TARJETA 1: LOLLAPALOOZA ARGENTINA 2027 -->
+        <!-- AFICHES VERTICALES ACCESIBLES EN GRILLA RESPONSIVA -->
+        <section class="content-section" data-aos="fade-up" data-aos-duration="800">
+            <h2>Shows Destacados de la Temporada</h2>
+
+            <section class="row g-4 mt-1" aria-label="Lista de conciertos destacados">
+                <!-- TARJETA 1: LOLLAPALOOZA -->
                 <article class="col-12 col-md-4">
                     <section class="card-interactive">
                         <figure class="concert-card-figure">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800" alt="Lollapalooza Argentina 2027 Afiche Oficial" class="concert-card-image">
-                            <figcaption class="concert-card-caption">Festival en vivo • Argentina 2027</figcaption>
+                            <img src="https://cdn.getcrowder.com/images/9fdb7cf6-443b-4959-95df-837d891ef0a8-banners-lineuplolla27-dfaalineup-640x640-1.jpg#afiche-lollapalooza-lineup-oficial.jpg"
+                                referrerpolicy="no-referrer"
+                                alt="Afiche publicitario oficial del lineup completo de Lollapalooza Argentina 2027 con información de entradas"
+                                class="concert-card-image">
+                            <figcaption class="concert-card-caption">Festival en vivo • Hipódromo de San Isidro
+                            </figcaption>
                         </figure>
-                        <h2>Lollapalooza 2027</h2>
+                        <h2>Lollapalooza Argentina 2027</h2>
                         <p class="concert-info">12, 13 y 14 de Marzo - 12:00 HS</p>
-                        <p>Lugar: Hipódromo de San Isidro</p>
+                        <p>Lugar: Hipódromo de San Isidro, Buenos Aires</p>
                     </section>
                 </article>
 
-                <!-- TARJETA 2: FOO FIGHTERS TAKE COVER TOUR -->
+                <!-- TARJETA 2: SLIPKNOT -->
                 <article class="col-12 col-md-4">
                     <section class="card-interactive">
                         <figure class="concert-card-figure">
-                            <img src="../images/foofither.jpg" alt="Foo Fighters Take Cover Tour 2027 Afiche Oficial" class="concert-card-image">
-                            <figcaption class="concert-card-caption">Show • rock alternativo, hard rock y post-grunge.</figcaption>
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800#afiche-slipknot-here-comes-the-pain.jpg"
+                                alt="Afiche del tour Here Comes The Pain de Slipknot en Movistar Arena"
+                                class="concert-card-image">
+                            <figcaption class="concert-card-caption">Concierto Heavy Metal • Movistar Arena</figcaption>
                         </figure>
-                        <h2>Foo Fighters</h2>
+                        <h2>Slipknot: Here Comes The Pain</h2>
+                        <p class="concert-info">15 de Noviembre - 21:00 HS</p>
+                        <p>Lugar: Movistar Arena, Buenos Aires</p>
+                    </section>
+                </article>
+
+                <!-- TARJETA 3: FOO FIGHTERS -->
+                <article class="col-12 col-md-4">
+                    <section class="card-interactive">
+                        <figure class="concert-card-figure">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800#afiche-foo-fighters-take-cover-tour.jpg"
+                                alt="Afiche promocional oficial del tour Take Cover 2027 de Foo Fighters en Argentina"
+                                class="concert-card-image">
+                            <figcaption class="concert-card-caption">Recital de Rock • Estadio River Plate</figcaption>
+                        </figure>
+                        <h2>Foo Fighters: Take Cover Tour</h2>
                         <p class="concert-info">25 de Febrero - 21:00 HS</p>
-                        <p>Lugar: Estadio River Plate</p>
-                    </section>
-                </article>
-
-                <!-- TARJETA 3: BTS WORLD TOUR ARIRANG -->
-                <article class="col-12 col-md-4">
-                    <section class="card-interactive">
-                        <figure class="concert-card-figure">
-                            <img src="../images/bts.jpeg" alt="BTS World Tour Arirang Argentina Afiche Oficial" class="concert-card-image">
-                            <figcaption class="concert-card-caption">Show • K-pop</figcaption>
-                        </figure>
-                        <h2>BTS</h2>
-                        <p class="concert-info">21, 23 y 24 de Octubre - 20:00 HS</p>
-                        <p>Lugar: Estadio Único de La Plata</p>
+                        <p>Lugar: Estadio River Plate, Buenos Aires</p>
                     </section>
                 </article>
             </section>
@@ -90,23 +118,29 @@
 
     <footer class="main-footer">
         <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Enlaces a redes sociales oficiales">
             <ul class="footer-list">
                 <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Icono de Instagram" class="social-icon">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Ir al perfil de Instagram de Concerts Week">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Icono de Instagram"
+                            class="social-icon">
                         Instagram
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Icono de Twitter / X" class="social-icon">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Ir a la cuenta de Twitter de Concerts Week">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Icono de Twitter"
+                            class="social-icon">
                         Twitter
                     </a>
                 </li>
                 <li>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Icono de YouTube" class="social-icon">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Ir al canal de YouTube de Concerts Week">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Icono de YouTube"
+                            class="social-icon">
                         YouTube
                     </a>
                 </li>
@@ -114,7 +148,13 @@
         </nav>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
 </body>
+
 </html>

@@ -14,10 +14,9 @@
 }
 
 // Mixin con parámetros para Transiciones
-@mixin transition-smooth($prop: all, $time: 0.3s, $easing: ease-in-out) {
+@mixin transition-custom($prop: all, $time: 0.3s, $easing: ease-in-out) {
   transition: $prop $time $easing;
 }
-
 
 // Media Queries Responsivas (3 Breakpoints)
 @mixin tablet {
@@ -31,3 +30,5 @@
     @content;
   }
 }
+
+

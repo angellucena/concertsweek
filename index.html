@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concerts Week | Inicio</title>
+    <!-- SEO On-Page: Title enfocado en palabras clave y localización -->
+    <title>Agenda de Conciertos y Recitales en Vivo | Concerts Week</title>
+    <!-- SEO On-Page: Meta Description atractiva con llamado a la acción -->
+    <meta name="description"
+        content="Descubre la agenda semanal de conciertos, recitales y festivales de música en vivo. Consulta fechas, recintos en Argentina y compra tus entradas oficiales.">
+    <meta name="robots" content="index, follow">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Hoja de Estilos Externa Personalizada -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Librería de Animaciones AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Estilos CSS Compilados desde SCSS -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR DE BOOTSTRAP CON MENÚ HAMBURGUESA -->
+    <!-- NAVBAR BOOTSTRAP NAVEGABLE Y ACCESIBLE -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Navegación principal del sitio">
             <div class="container-fluid max-w-7xl">
-                <a class="navbar-brand brand-title" href="index.html">Concerts<span class="brand-accent">Week</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand brand-title" href="index.html"
+                    aria-label="Concerts Week - Ir a página de inicio">
+                    Concerts<span class="brand-accent">Week</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                        <li class="nav-item"><a class="nav-link active-page" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/conciertos.html">Próximos Conciertos</a></li>
+                        <li class="nav-item"><a class="nav-link active-page" href="index.html"
+                                aria-current="page">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/conciertos.html">Próximos Conciertos</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pages/nosotros.html">Sobre Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="pages/galeria.html">Galería y Música</a></li>
                         <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
@@ -36,95 +54,117 @@
         </nav>
     </header>
 
-    <!-- CARRUSEL PANORÁMICO DESTACADO -->
-    <section>
+    <!-- CARRUSEL HERO PANORÁMICO -->
+    <section aria-label="Espectáculos y homenajes destacados de la semana">
         <figure class="m-0">
             <div id="heroCarousel" class="carousel slide carousel-fade carousel-hero" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Ver Diapositiva 1: Lollapalooza Argentina 2027"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                        aria-label="Ver Diapositiva 2: Eternamente Gracias Leo Messi"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                        aria-label="Ver Diapositiva 3: Foo Fighters Live"></button>
                 </div>
                 <div class="carousel-inner">
-                    <!-- SLIDE 1: LOLLAPALOOZA ARGENTINA -->
-                    <div class="carousel-item active" data-bs-interval="4500">
-                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600" class="d-block w-100 carousel-img" alt="Lollapalooza Argentina Festival Hipódromo de San Isidro">
+                    <!-- SLIDE 1: LOLLAPALOOZA -->
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600#concierto-lollapalooza-argentina-escenario.jpg"
+                            class="d-block w-100 carousel-img"
+                            alt="Escenario principal de Lollapalooza Argentina repleto de público con luces neón en el Hipódromo de San Isidro">
                         <div class="carousel-hero-caption">
-                            <p class="hero-display-title">Lollapalooza Argentina</p>
-                            <p class="hero-display-subtitle">12, 13 y 14 de Marzo — Hipódromo de San Isidro | ¡Tickets a la Venta!</p>
+                            <p class="hero-display-title">Lollapalooza Argentina 2027</p>
+                            <p class="hero-display-subtitle">12, 13 y 14 de Marzo — Hipódromo de San Isidro | ¡Entradas
+                                a la Venta!</p>
                             <a href="pages/conciertos.html" class="btn-custom mt-2">Comprar Entradas</a>
                         </div>
                     </div>
-                    <!-- SLIDE 2: FOO FIGHTERS -->
-                    <div class="carousel-item" data-bs-interval="4500">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600" class="d-block w-100 carousel-img" alt="Foo Fighters en vivo en concierto de estadio">
+                    <!-- SLIDE 2: ETERNAMENTE GRACIAS LEO MESSI -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="https://a.espncdn.com/photo/2022/1218/r1108256_1296x729_16-9.jpg#homenaje-lionel-messi-copa-del-mundo.jpg"
+                            referrerpolicy="no-referrer" class="d-block w-100 carousel-img"
+                            alt="Fotografía oficial de Lionel Messi levantando la Copa del Mundo Qatar 2022 vistiendo la bisht negra y la camiseta albiceleste de la Selección Argentina">
+                        <div class="carousel-hero-caption">
+                            <p class="hero-display-title">¡Eternamente Gracias, Leo!</p>
+                            <p class="hero-display-subtitle">“Tropezar, volver a levantarse e intentarlo otra vez...
+                                Luchar por los sueños. Eso es la vida.” — Homenaje a Lionel Messi</p>
+                            <a href="pages/conciertos.html" class="btn-custom mt-2">Ver Homenaje</a>
+                        </div>
+                    </div>
+                    <!-- SLIDE 3: FOO FIGHTERS -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600#foo-fighters-concierto-estadio-river.jpg"
+                            class="d-block w-100 carousel-img"
+                            alt="Show de rock masivo de Foo Fighters en el Estadio River Plate con fuegos artificiales e iluminación violeta">
                         <div class="carousel-hero-caption">
                             <p class="hero-display-title">Foo Fighters Live</p>
-                            <p class="hero-display-subtitle">Estadio River Plate — El show de rock del año</p>
+                            <p class="hero-display-subtitle">Estadio River Plate — El show de rock alternativo más
+                                esperado del año</p>
                             <a href="pages/conciertos.html" class="btn-custom mt-2">Explorar Fechas</a>
                         </div>
                     </div>
-                    <!-- SLIDE 3: SOMOS MÚSICA -->
-                    <div class="carousel-item" data-bs-interval="4500">
-                        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1600" class="d-block w-100 carousel-img" alt="Multitud en estadio de noche">
-                        <div class="carousel-hero-caption">
-                            <p class="hero-display-title">Somos música</p>
-                            <p class="hero-display-subtitle">Descubrí todos nuestros shows y festivales en vivo</p>
-                            <a href="pages/conciertos.html" class="btn-custom mt-2">Ver Cartelera Completa</a>
-                        </div>
-                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+                    aria-label="Ir a la diapositiva anterior">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+                    aria-label="Ir a la siguiente diapositiva">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-            <figcaption class="visually-hidden">Carrusel interactivo de espectáculos recomendados.</figcaption>
+            <figcaption class="visually-hidden">Carrusel dinámico con los espectáculos musicales y homenajes destacados
+                de la semana.</figcaption>
         </figure>
     </section>
 
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA DE INICIO -->
     <main class="main-content">
-        <section class="content-section text-center py-4">
+        <!-- ÚNICO H1 DEL ARCHIVO (REGLA DE SEO OBLIGATORIA) -->
+        <section class="content-section text-center py-4" data-aos="fade-down" data-aos-duration="800">
             <article>
-                <h1>Agenda Semanal de Música en Vivo</h1>
-                <h2>La Agenda Semanal Definitiva</h2>
-                <p class="fs-5">Explora eventos en vivo, recintos, festivales e información actualizada para planificar tus salidas musicales.</p>
+                <h1>Agenda Semanal de Música y Recitales en Vivo</h1>
+                <p class="fs-5">Tu plataforma independiente para consultar cartelera de conciertos, festivales
+                    musicales, recintos e información de entradas oficiales en Argentina.</p>
             </article>
         </section>
 
-        <section class="content-section">
-            <h2>Nuestros Servicios</h2>
+        <section class="content-section" data-aos="fade-up" data-aos-duration="800">
+            <h2>Servicios para Amantes de la Música</h2>
             <ul class="feature-list">
-                <li>Cartelera semanal organizada por fechas y recintos.</li>
-                <li>Información detallada de artistas y acceso directo a tickets oficiales.</li>
-                <li>Novedades exclusivas de la escena local e internacional.</li>
+                <li>Cartelera de shows actualizada diariamente por fechas, bandas y recintos.</li>
+                <li>Acceso directo a venta de tickets oficiales de AllAccess, TuEntrada y Ticketek.</li>
+                <li>Novedades exclusivas de la escena del rock, pop, metal, indie y música electrónica.</li>
             </ul>
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA SEMÁNTICO -->
     <footer class="main-footer">
         <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Enlaces a redes sociales oficiales">
             <ul class="footer-list">
                 <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Icono de Instagram" class="social-icon">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Visitar nuestro perfil oficial en Instagram (se abre en una nueva pestaña)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                            alt="Icono de la red social Instagram" class="social-icon">
                         Instagram
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Icono de Twitter / X" class="social-icon">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Visitar nuestra cuenta oficial en X / Twitter (se abre en una nueva pestaña)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png"
+                            alt="Icono de la red social X / Twitter" class="social-icon">
                         Twitter
                     </a>
                 </li>
                 <li>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Icono de YouTube" class="social-icon">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Visitar nuestro canal oficial de YouTube (se abre en una nueva pestaña)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                            alt="Icono de la red social YouTube" class="social-icon">
                         YouTube
                     </a>
                 </li>
@@ -132,7 +172,14 @@
         </nav>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- LIBRERÍAS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
 </body>
+
 </html>

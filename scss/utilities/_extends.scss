@@ -1,11 +1,8 @@
 @use "variables" as *;
 
-// ==========================================================================
-// _extends.scss - PLACEHOLDERS REUTILIZABLES DE SCSS
-// ==========================================================================
-
+// Placeholders reutilizables para el proyecto
 %card-base {
-  background-color: $color-bg-primary;
+  background-color: $color-bg-card;
   border: 1px solid $color-border;
   border-radius: $radius-lg;
   padding: 1.25rem;
@@ -18,6 +15,4 @@
   border: 1px solid $color-border;
   border-radius: $radius-md;
   color: $color-text-main;
-  font-family: $font-body;
-  font-size: 0.95rem;
 }
