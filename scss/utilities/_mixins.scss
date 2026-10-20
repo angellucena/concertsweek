@@ -1,10 +1,10 @@
 @use "variables" as *;
 
 // ==========================================================================
-// _mixins.scss - MIXINS REUTILIZABLES CON PARÁMETROS
+// _mixins.scss - Mixins reutilizables con parámetros
 // ==========================================================================
 
-// Mixin con parámetros para Flexbox
+// Flexbox configurable
 @mixin flex-layout($direction: row, $justify: center, $align: center, $gap: 0) {
   display: flex;
   flex-direction: $direction;
@@ -13,22 +13,68 @@
   gap: $gap;
 }
 
-// Mixin con parámetros para Transiciones
-@mixin transition-custom($prop: all, $time: 0.3s, $easing: ease-in-out) {
+// Grilla de columnas iguales
+@mixin grid-columns($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, minmax(0, 1fr));
+  gap: $gap;
+}
+
+// Transición configurable
+@mixin transition-smooth($prop: all, $time: 0.3s, $easing: ease) {
   transition: $prop $time $easing;
 }
 
-// Media Queries Responsivas (3 Breakpoints)
+// Texto con brillo neón (color y resplandor configurables)
+@mixin neon-text($color: $color-primary, $glow: $glow-primary) {
+  color: $color;
+  text-shadow: 0 0 14px $glow;
+}
+
+// Superficie "vidrio" oscuro (paneles translúcidos)
+@mixin glass-surface($bg: $color-bg-nav, $blur: 12px) {
+  background-color: $bg;
+  backdrop-filter: blur($blur);
+}
+
+// Texto con degradado de marca
+@mixin gradient-text($gradient: $gradient-brand) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+// Contenedor oscuro con borde y sombra
+@mixin dark-panel($radius: $radius-lg, $padding: 1.25rem) {
+  background: $gradient-card;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: $padding;
+}
+
+// Media queries mobile-first
+@mixin mobile-lg {
+  @media (min-width: $bp-mobile-lg) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: $bp-tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-desktop) {
     @content;
   }
 }
 
-
+@mixin wide {
+  @media (min-width: $bp-wide) {
+    @content;
+  }
+}

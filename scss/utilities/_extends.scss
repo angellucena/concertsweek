@@ -1,8 +1,18 @@
 @use "variables" as *;
 
-// Placeholders reutilizables para el proyecto
+// ==========================================================================
+// _extends.scss - Placeholders reutilizables (@extend)
+// ==========================================================================
+
+%section-box {
+  background: $gradient-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 1.25rem;
+}
+
 %card-base {
-  background-color: $color-bg-card;
+  background: $gradient-card;
   border: 1px solid $color-border;
   border-radius: $radius-lg;
   padding: 1.25rem;
@@ -12,7 +22,42 @@
   width: 100%;
   padding: 0.85rem 1rem;
   background-color: $color-bg-primary;
-  border: 1px solid $color-border;
+  border: 1px solid $color-border-strong;
   border-radius: $radius-md;
   color: $color-text-main;
+}
+
+%badge-base {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: $radius-full;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+%chip-base {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-full;
+  background-color: $color-bg-soft;
+  color: $color-text-muted;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+%icon-bubble {
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-full;
+  background-color: $color-primary-soft;
+  border: 1px solid $glow-primary;
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

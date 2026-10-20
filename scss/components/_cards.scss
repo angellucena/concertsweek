@@ -2,43 +2,38 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/extends" as *;
 
-// Animación nativa con @keyframes
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 rgba(139, 92, 246, 0); }
-  50% { box-shadow: 0 0 22px rgba(139, 92, 246, 0.5); }
-  100% { box-shadow: 0 0 0 rgba(139, 92, 246, 0); }
-}
-
 .card-interactive {
   @extend %card-base;
   border-left: 4px solid $color-primary;
   height: 100%;
-  @include flex-layout(column, space-between, stretch, 0);
+  @include flex-layout(column, flex-start, stretch, 0.25rem);
   @include transition-smooth(transform, 0.3s);
 
   &:hover {
     transform: translateY(-6px);
-    border-color: $color-primary;
     animation: pulseGlow 2s infinite;
 
     .concert-card-image {
-      transform: scale(1.03);
+      transform: scale(1.06);
     }
   }
 }
 
 .concert-card-figure {
-  width: 100%;
-  margin-bottom: 0.75rem;
+  position: relative;
+  margin: 0 0 0.75rem;
+  overflow: hidden;
+  border-radius: $radius-md;
 }
 
 .concert-card-image {
+  display: block;
   width: 100%;
-  height: 380px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: $radius-md;
   border: 1px solid $color-border;
- @include transition-smooth(transform, 0.4s);
+  border-radius: $radius-md;
+  @include transition-smooth(transform, 0.5s);
 }
 
 .concert-card-caption {
@@ -49,11 +44,105 @@
   margin-top: 0.5rem;
 }
 
+// Etiqueta de estado sobre el afiche
+.badge-status {
+  @extend %badge-base;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: $color-accent;
+  color: $color-text-dark;
 
-.form-label {
-  color: $color-text-main;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-  display: block;
+  &--soldout {
+    background-color: $color-secondary;
+    color: $color-text-white;
+  }
+
+  &--past {
+    background-color: $color-border-strong;
+    color: $color-text-main;
+  }
+
+  &--hot {
+    background-color: $color-gold;
+    color: $color-text-dark;
+  }
+}
+
+// Tarjeta de valor / compromiso con icono animado
+.value-card {
+  @extend %card-base;
+  height: 100%;
+  text-align: center;
+  @include transition-smooth(transform, 0.3s);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: $color-primary;
+    box-shadow: $shadow-neon;
+
+    .icon-bubble {
+      animation: floatY 1.4s ease-in-out infinite;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.icon-bubble {
+  @extend %icon-bubble;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+
+  &--pink {
+    background-color: $color-secondary-soft;
+    border-color: $glow-secondary;
+    color: $color-secondary;
+  }
+
+  &--cyan {
+    background-color: $color-accent-soft;
+    border-color: $glow-accent;
+    color: $color-accent;
+  }
+}
+
+// Franja de datos (estadísticas)
+.stat-strip {
+  @include grid-columns(2, 0.75rem);
+
+  @include desktop {
+    @include grid-columns(4, 1rem);
+  }
+}
+
+.stat-card {
+  padding: 1.1rem 0.75rem;
+  text-align: center;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-bg-soft;
+  @include transition-smooth;
+
+  &:hover {
+    border-color: $color-secondary;
+    transform: translateY(-4px);
+  }
+
+  strong {
+    display: block;
+    font-family: $font-heading;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    @include gradient-text;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }

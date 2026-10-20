@@ -1,0 +1,225 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+// ---------- Cinta de próximas fechas ----------
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  background-color: $color-bg-soft;
+  padding: 0.6rem 0;
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.ticker__item {
+  padding: 0 1.75rem;
+  white-space: nowrap;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $color-text-main;
+
+  b {
+    color: $color-secondary;
+  }
+
+  &::after {
+    content: "\266B";
+    margin-left: 1.75rem;
+    color: $color-primary;
+  }
+}
+
+// ---------- Cuenta regresiva ----------
+.countdown {
+  @include grid-columns(4, 0.5rem);
+  max-width: 460px;
+  margin: 1.25rem auto 0;
+
+  @include tablet {
+    gap: 0.9rem;
+  }
+}
+
+.countdown__cell {
+  padding: 0.75rem 0.25rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-md;
+  background-color: $color-bg-primary;
+  text-align: center;
+
+  strong {
+    display: block;
+    font-family: $font-heading;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: $color-text-white;
+
+    @include tablet {
+      font-size: 2.1rem;
+    }
+  }
+
+  span {
+    font-size: 0.65rem;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+
+// ---------- Agenda filtrable ----------
+.agenda-toolbar {
+  margin-bottom: 1.25rem;
+  @include flex-layout(column, flex-start, stretch, 0.9rem);
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.agenda-search {
+  @extend %form-field-base;
+  max-width: 100%;
+
+  @include desktop {
+    max-width: 320px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px $glow-primary;
+  }
+}
+
+.agenda-count {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: $color-text-muted;
+
+  strong {
+    color: $color-secondary;
+  }
+}
+
+.agenda-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include flex-layout(column, flex-start, stretch, 0.75rem);
+}
+
+.agenda-row {
+  position: relative;
+  padding: 0.9rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-bg-soft;
+  @include grid-columns(1, 0.75rem);
+  align-items: center;
+  @include transition-smooth;
+
+  @include tablet {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1rem 1.25rem;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    background-color: $color-bg-card-hover;
+    transform: translateX(6px);
+  }
+
+  // Filas ocultas por el filtro
+  &.is-hidden {
+    display: none;
+  }
+
+  &__date {
+    width: 76px;
+    padding: 0.4rem 0;
+    border-radius: $radius-md;
+    background: $gradient-brand;
+    text-align: center;
+    color: $color-text-white;
+    font-family: $font-heading;
+    line-height: 1;
+
+    strong {
+      display: block;
+      font-size: 1.7rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.15rem;
+    font-size: 1.1rem;
+  }
+
+  &__meta {
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+  }
+
+  &__tags {
+    flex-wrap: wrap;
+    @include flex-layout(row, flex-start, center, 0.4rem);
+  }
+}
+
+.tag {
+  @extend %badge-base;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.65rem;
+  border: 1px solid $color-border-strong;
+  color: $color-text-muted;
+
+  &--genre {
+    border-color: $glow-primary;
+    color: $color-primary;
+  }
+
+  &--city {
+    border-color: $glow-accent;
+    color: $color-accent;
+  }
+
+  &--hot {
+    border-color: $color-gold;
+    color: $color-gold;
+  }
+}
+
+.agenda-empty {
+  display: none;
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px dashed $color-border-strong;
+  border-radius: $radius-lg;
+
+  &.is-visible {
+    display: block;
+    animation: popIn 0.4s ease both;
+  }
+}

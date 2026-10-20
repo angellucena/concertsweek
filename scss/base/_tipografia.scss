@@ -1,23 +1,65 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
-h1, h2 {
+h1,
+h2,
+h3,
+h4 {
   font-family: $font-heading;
   color: $color-text-white;
   line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  color: $color-primary;
+  letter-spacing: -0.5px;
   margin-bottom: 0.75rem;
+  @include gradient-text;
+
+  @include tablet {
+    font-size: 2.4rem;
+  }
+
+  @include desktop {
+    font-size: 3rem;
+  }
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: $color-secondary;
-  margin-bottom: 0.75rem;
+  color: $color-text-white;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  position: relative;
+
+  // Subrayado de marca animado
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    border-radius: $radius-full;
+    background: $gradient-brand;
+    @include transition-smooth(width, 0.5s);
+  }
+
+  &:hover::after {
+    width: 120px;
+  }
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -29,7 +71,7 @@ p {
 a {
   color: $color-accent;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  @include transition-smooth;
 
   &:hover {
     color: $color-secondary;
@@ -40,10 +82,44 @@ a {
     outline-offset: 3px;
     border-radius: 4px;
   }
+}
 
-  &:active {
-    transform: scale(0.97);
+.text-center-title h2::after,
+.content-section--center h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lead-text {
+  font-size: 1.05rem;
+
+  @include tablet {
+    font-size: 1.2rem;
   }
 }
 
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
+  li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.6rem;
+    color: $color-text-muted;
+
+    &::before {
+      content: "\266A";
+      position: absolute;
+      left: 0;
+      color: $color-secondary;
+    }
+  }
+}
+
+.concert-info {
+  color: $color-accent;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}

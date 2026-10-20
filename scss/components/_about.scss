@@ -1,0 +1,146 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
+
+// ---------- Línea de tiempo (historia) ----------
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 0 0 1.5rem;
+  position: relative;
+
+  // Línea vertical
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, #8b5cf6, #ec4899, rgba(236, 72, 153, 0));
+  }
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-bg-soft;
+  @include transition-smooth;
+
+  // Punto de la línea
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.35rem;
+    left: -1.5rem;
+    width: 14px;
+    height: 14px;
+    border: 3px solid $color-bg-primary;
+    border-radius: $radius-full;
+    background: $gradient-brand;
+    box-shadow: 0 0 12px $glow-secondary-strong;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    transform: translateX(6px);
+  }
+
+  h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.timeline__year {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: $color-secondary;
+}
+
+// ---------- Bloques con imagen + texto ----------
+.split-block {
+  @include grid-columns(1, 1.25rem);
+  align-items: center;
+
+  @include desktop {
+    @include grid-columns(2, 2.5rem);
+  }
+
+  &--reverse .split-block__media {
+    @include desktop {
+      order: 2;
+    }
+  }
+
+  &__media {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      filter: grayscale(0.7) contrast(1.05);
+      @include transition-smooth(transform, 0.6s);
+    }
+
+    &:hover img {
+      filter: grayscale(0);
+      transform: scale(1.05);
+    }
+
+    figcaption {
+      padding: 0.5rem 0.9rem;
+      font-size: 0.75rem;
+      color: $color-text-muted;
+      background-color: $color-bg-soft;
+    }
+  }
+}
+
+// ---------- Compromisos con checks ----------
+.check-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding: 0.35rem 0 0.35rem 2rem;
+    color: $color-text-muted;
+
+    &::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      top: 0.35rem;
+      width: 1.35rem;
+      height: 1.35rem;
+      border-radius: $radius-full;
+      background-color: $color-accent-soft;
+      color: $color-accent;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.35rem;
+    }
+
+    strong {
+      color: $color-text-white;
+    }
+  }
+}

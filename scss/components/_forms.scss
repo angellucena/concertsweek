@@ -2,14 +2,15 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/extends" as *;
 
-// ==========================================================================
-// _forms.scss - ESTILOS Y VALIDACIÓN VISUAL DE FORMULARIOS
-// ==========================================================================
-
 .form-input,
-.form-textarea {
+.form-textarea,
+.form-select {
   @extend %form-field-base;
-  @include transition-smooth(all, 0.3s);
+  @include transition-smooth;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
 
   &:hover {
     border-color: $color-accent;
@@ -18,13 +19,13 @@
   &:focus {
     outline: none;
     border-color: $color-primary;
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.35);
+    box-shadow: 0 0 0 3px $glow-primary;
   }
 
-  // Estilos de validación HTML5
+  // Validación visual HTML5
   &:user-invalid {
     border-color: $color-secondary;
-    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+    box-shadow: 0 0 0 3px $glow-secondary;
   }
 
   &:user-valid {
@@ -32,13 +33,27 @@
   }
 }
 
+.form-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
 .form-label {
+  display: block;
   color: $color-text-main;
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.4rem;
-  display: block;
 }
 
-
-
+.form-hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  color: $color-text-muted;
+}

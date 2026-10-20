@@ -1,34 +1,99 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
 
 .btn-custom {
   display: inline-block;
-  padding: 0.85rem 2rem;
-  background: linear-gradient(135deg, $color-primary, $color-secondary);
-  color: $color-text-white !important;
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem 1.75rem;
+  background: $gradient-brand;
+  color: $color-text-white;
   border: none;
   border-radius: $radius-full;
   font-family: $font-heading;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   box-shadow: $shadow-button;
   @include transition-smooth;
 
+  // Destello que cruza el botón al pasar el mouse
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateX(-120%) skewX(-20deg);
+  }
+
   &:hover {
-    opacity: 0.95;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(236, 72, 153, 0.45);
+    color: $color-text-white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px $glow-secondary-strong;
+
+    &::after {
+      animation: shine 0.8s ease;
+    }
   }
 
   &:focus-visible {
     outline: 3px solid $color-accent;
+    outline-offset: 2px;
   }
 
   &:active {
     transform: translateY(0);
   }
+
+  &--sm {
+    padding: 0.5rem 1.15rem;
+    font-size: 0.85rem;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-border-strong;
+    box-shadow: none;
+    color: $color-text-main;
+
+    &:hover {
+      border-color: $color-secondary;
+      background-color: $color-secondary-soft;
+      box-shadow: 0 0 18px $glow-secondary;
+    }
+  }
 }
 
+// Chips de filtro (género, ciudad, mes)
+.chip {
+  @extend %chip-base;
+  @include transition-smooth;
 
+  &:hover {
+    color: $color-text-white;
+    border-color: $color-primary;
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    background: $gradient-brand;
+    border-color: transparent;
+    color: $color-text-white;
+    box-shadow: $shadow-button;
+  }
+}
+
+.chip-group {
+  flex-wrap: wrap;
+  @include flex-layout(row, center, center, 0.5rem);
+}

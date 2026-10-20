@@ -1,24 +1,21 @@
-// ==========================================================================
-// main.scss - ÚNICO PUNTO DE ENTRADA (COMPILA A styles/styles.css)
-// ==========================================================================
-
-// 1. Utilities (Importa _variables.scss, _mixins.scss y _extends.scss)
-@use "utilities/variables" as *;
-@use "utilities/mixins" as *;
+@use "utilities/variables";
+@use "utilities/mixins";
 @use "utilities/extends";
-  
 
-// 2. Base (Importa _base.scss y _tipografia.scss)
 @use "base/base";
 @use "base/tipografia";
+@use "base/animaciones";
 
-// 3. Layout (Importa _header.scss, _nav.scss y _footer.scss)
 @use "layout/header";
+@use "layout/logo";
 @use "layout/nav";
 @use "layout/footer";
 
-// 4. Components (Importa _buttons.scss, _cards.scss, _carousel.scss y _forms.scss)
 @use "components/buttons";
 @use "components/cards";
 @use "components/carousel";
+@use "components/gallery";
+@use "components/agenda";
+@use "components/about";
+@use "components/support";
 @use "components/forms";

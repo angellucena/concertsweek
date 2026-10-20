@@ -1,21 +1,43 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// El header es el elemento sticky (así acompaña todo el scroll de la página)
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  border-bottom: 1px solid $color-border;
+  @include glass-surface($color-bg-nav, 14px);
+  @include transition-smooth(box-shadow, 0.3s);
+
+  // Clase que agrega main.js al hacer scroll
+  &.is-scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+    border-bottom-color: $color-border-strong;
+
+    .navbar-custom {
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+  }
+}
 
 .navbar-custom {
-  background-color: rgba(21, 28, 44, 0.95) !important;
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid $color-border;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
+  @include transition-smooth(padding, 0.3s);
+
+  @include tablet {
+    padding: 1rem 1.5rem;
+  }
 }
 
-.brand-title {
-  font-family: $font-heading;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: $color-text-white;
+// Barra de progreso de lectura
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 0;
+  background: $gradient-brand;
+  box-shadow: 0 0 10px $glow-secondary-strong;
 }
-
-.brand-accent {
-  color: $color-secondary;
-}
-
-

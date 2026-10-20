@@ -1,15 +1,25 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/extends" as *;
 
-// Reseteo Global del Box Model
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
 body {
-  background-color: $color-bg-primary !important;
-  color: $color-text-main !important;
+  background-color: $color-bg-primary;
+  background-image: $gradient-spotlight;
+  background-repeat: no-repeat;
+  background-size: 100% 520px;
+  color: $color-text-main;
   font-family: $font-body;
   font-size: 1rem;
   line-height: 1.6;
@@ -18,20 +28,145 @@ body {
   flex-direction: column;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background-color: $color-secondary;
+  color: $color-text-white;
+}
+
+// Barra de scroll oscura
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-border-strong;
+  border-radius: $radius-full;
+}
+
 .main-content {
+  flex: 1;
+  width: 100%;
+}
+
+.page-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-  flex: 1;
+  padding: 1.25rem 1rem;
+
+  @include tablet {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .content-section {
-  background-color: $color-bg-card;
-  border: 1px solid $color-border;
-  border-radius: $radius-lg;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  @extend %section-box;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @include desktop {
+    padding: 2.25rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--glow::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    width: 70%;
+    height: 80%;
+    transform: translateX(-50%);
+    background: $gradient-spotlight;
+    pointer-events: none;
+  }
 }
 
+// Cabecera de página interna (portada oscura de cada sección)
+.page-hero {
+  position: relative;
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid $color-border;
+  background: $gradient-spotlight-pink;
 
+  @include tablet {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  p {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.9rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-full;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-accent;
+  background-color: $color-bg-soft;
+}
+
+.media-figure {
+  margin: 1.25rem 0;
+}
+
+.media-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+}
+
+.divider-glow {
+  height: 1px;
+  border: 0;
+  margin: 2rem 0;
+  background: linear-gradient(90deg, transparent, #8b5cf6, #ec4899, transparent);
+  opacity: 0.6;
+}
+
+// Accesibilidad: respeta la preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
