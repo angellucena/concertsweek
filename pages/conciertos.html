@@ -4,157 +4,1286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO On-Page: Title específico para la sección de cartelera -->
-    <title>Próximos Conciertos y Cartelera de Recitales | Concerts Week</title>
-    <!-- SEO On-Page: Meta Description -->
-    <meta name="description"
-        content="Explora la cartelera completa de próximos conciertos en Argentina. Encuentra información sobre Lollapalooza 2027, Slipknot en Movistar Arena y Foo Fighters en River Plate.">
+    <!-- SEO on-page: title, description y keywords propios de cada página -->
+    <title>Próximos Conciertos en Argentina 2026-2027 | Concerts Week</title>
+    <meta name="description" content="Agenda con 36 conciertos y festivales en Argentina: Iron Maiden, BTS, Ed Sheeran, Maná, Foo Fighters y Lollapalooza. Filtrá por género y ciudad.">
+    <meta name="keywords" content="próximos conciertos, cartelera Argentina, recitales 2026, conciertos 2027, festivales, estadios, entradas oficiales, Buenos Aires, Córdoba, Rosario, La Plata">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Próximos Conciertos en Argentina 2026-2027 | Concerts Week">
+    <meta property="og:description" content="Agenda con 36 conciertos y festivales en Argentina: Iron Maiden, BTS, Ed Sheeran, Maná, Foo Fighters y Lollapalooza. Filtrá por género y ciudad.">
+    <meta property="og:locale" content="es_AR">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- AOS Animation Library CDN -->
+    <!-- AOS (animaciones al hacer scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Estilos CSS Compilados desde SCSS -->
+    <!-- Estilos compilados desde SCSS -->
     <link rel="stylesheet" href="../styles/styles.css">
+    <script type="application/ld+json">
+        {
+         "@context": "https://schema.org",
+         "@graph": [
+          {
+           "@type": "MusicEvent",
+           "name": "Iron Maiden",
+           "startDate": "2026-10-20",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Tomás A. Ducó (Huracán)",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "BTS · World Tour Arirang",
+           "startDate": "2026-10-21",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Único Diego A. Maradona",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "La Plata",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Solomun",
+           "startDate": "2026-10-24",
+           "location": {
+            "@type": "Place",
+            "name": "Mandarine Park",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Camilo",
+           "startDate": "2026-10-25",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Camilo",
+           "startDate": "2026-10-30",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Metropolitano",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Rosario",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Camilo",
+           "startDate": "2026-10-31",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Mario A. Kempes",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Córdoba",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Jesse & Joy",
+           "startDate": "2026-11-01",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Def Leppard",
+           "startDate": "2026-11-05",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Ronnie Wood",
+           "startDate": "2026-11-06",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Jesse & Joy",
+           "startDate": "2026-11-06",
+           "location": {
+            "@type": "Place",
+            "name": "Quality Espacio",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Córdoba",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Romeo Santos & Prince Royce",
+           "startDate": "2026-11-12",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Mario A. Kempes",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Córdoba",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "María Becerra",
+           "startDate": "2026-11-13",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Abel Pintos",
+           "startDate": "2026-11-13",
+           "location": {
+            "@type": "Place",
+            "name": "Teatro Gran Rex",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Romeo Santos & Prince Royce",
+           "startDate": "2026-11-14",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Vélez Sarsfield",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Creamfields",
+           "startDate": "2026-11-14",
+           "location": {
+            "@type": "Place",
+            "name": "Parque de la Ciudad",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Hayley Williams",
+           "startDate": "2026-11-15",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Malvinas Argentinas",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Andrés Calamaro",
+           "startDate": "2026-11-23",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "ZZ Top",
+           "startDate": "2026-11-24",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Gorillaz",
+           "startDate": "2026-11-26",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Mario A. Kempes",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Córdoba",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Johnny Marr",
+           "startDate": "2026-11-26",
+           "location": {
+            "@type": "Place",
+            "name": "Complejo C Art Media",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "WOS",
+           "startDate": "2026-11-27",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Obras Sanitarias",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Primavera Sound Buenos Aires",
+           "startDate": "2026-11-28",
+           "location": {
+            "@type": "Place",
+            "name": "Sede a confirmar con la organización",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Eros Ramazzotti",
+           "startDate": "2026-11-28",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Ed Sheeran",
+           "startDate": "2026-11-29",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Tomás A. Ducó (Huracán)",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Omar Courtz",
+           "startDate": "2026-11-30",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Babymetal",
+           "startDate": "2026-12-01",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Anuel AA",
+           "startDate": "2026-12-03",
+           "location": {
+            "@type": "Place",
+            "name": "Tecnópolis",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Daniel Caesar",
+           "startDate": "2026-12-05",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Obras Sanitarias",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Maná · Vivir Sin Aire Tour",
+           "startDate": "2026-12-10",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio River Plate",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Deep Purple",
+           "startDate": "2026-12-10",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Divididos",
+           "startDate": "2026-12-10",
+           "location": {
+            "@type": "Place",
+            "name": "Teatro Flores",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Tan Biónica",
+           "startDate": "2026-12-12",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio Único Diego A. Maradona",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "La Plata",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Dillom",
+           "startDate": "2026-12-12",
+           "location": {
+            "@type": "Place",
+            "name": "Microestadio de Ferro",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Slayer + Kreator",
+           "startDate": "2026-12-14",
+           "location": {
+            "@type": "Place",
+            "name": "Movistar Arena",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Foo Fighters · Take Cover Tour",
+           "startDate": "2027-02-25",
+           "location": {
+            "@type": "Place",
+            "name": "Estadio River Plate",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          },
+          {
+           "@type": "MusicEvent",
+           "name": "Lollapalooza Argentina 2027",
+           "startDate": "2027-03-12",
+           "location": {
+            "@type": "Place",
+            "name": "Hipódromo de San Isidro",
+            "address": {
+             "@type": "PostalAddress",
+             "addressLocality": "Buenos Aires",
+             "addressCountry": "AR"
+            }
+           }
+          }
+         ]
+        }
+    </script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Navegación principal del sitio">
-            <div class="container-fluid max-w-7xl">
-                <a class="navbar-brand brand-title" href="../index.html" aria-label="Concerts Week - Ir a inicio">
-                    Concerts<span class="brand-accent">Week</span>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Navegación principal del sitio">
+            <div class="container-fluid">
+                <a class="navbar-brand brand-title" href="../index.html" aria-label="Concerts Week - Ir al inicio">
+                    <span class="logo-mark" aria-hidden="true">
+                        <span class="logo-bars"><span></span><span></span><span></span><span></span></span>
+                    </span>
+                    <span>Concerts<span class="brand-accent">Week</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                     aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active-page" href="conciertos.html"
-                                aria-current="page">Próximos Conciertos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería y Música</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-page" href="conciertos.html" aria-current="page">Próximos Conciertos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galería y Música</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
     <main class="main-content">
-        <!-- ÚNICO H1 DEL ARCHIVO -->
-        <section class="content-section" data-aos="fade-down" data-aos-duration="800">
-            <article>
-                <h1>Cartelera de Próximos Conciertos y Recitales</h1>
-                <p>Consulta las fechas confirmadas, estadios, recintos e información de tickets para los principales
-                    shows internacionales en el país.</p>
-            </article>
+        <section class="page-hero" data-aos="fade-down">
+            <span class="eyebrow">Cartelera 2026-2027</span>
+            <h1>Cartelera de Próximos Conciertos y Recitales</h1>
+            <p class="lead-text">Consulta las fechas, estadios y recintos de los principales shows en Argentina. Las entradas se compran únicamente en los canales oficiales de cada productora.</p>
         </section>
 
-        <!-- AFICHES VERTICALES ACCESIBLES EN GRILLA RESPONSIVA -->
-        <section class="content-section" data-aos="fade-up" data-aos-duration="800">
-            <h2>Shows Destacados de la Temporada</h2>
-
-            <section class="row g-4 mt-1" aria-label="Lista de conciertos destacados">
-                <!-- TARJETA 1: LOLLAPALOOZA -->
-                <article class="col-12 col-md-4">
-                    <section class="card-interactive">
-                        <figure class="concert-card-figure">
-                            <img src="https://cdn.getcrowder.com/images/9fdb7cf6-443b-4959-95df-837d891ef0a8-banners-lineuplolla27-dfaalineup-640x640-1.jpg#afiche-lollapalooza-lineup-oficial.jpg"
-                                referrerpolicy="no-referrer"
-                                alt="Afiche publicitario oficial del lineup completo de Lollapalooza Argentina 2027 con información de entradas"
-                                class="concert-card-image">
-                            <figcaption class="concert-card-caption">Festival en vivo • Hipódromo de San Isidro
-                            </figcaption>
-                        </figure>
-                        <h2>Lollapalooza Argentina 2027</h2>
-                        <p class="concert-info">12, 13 y 14 de Marzo - 12:00 HS</p>
-                        <p>Lugar: Hipódromo de San Isidro, Buenos Aires</p>
-                    </section>
-                </article>
-
-                <!-- TARJETA 2: SLIPKNOT -->
-                <article class="col-12 col-md-4">
-                    <section class="card-interactive">
-                        <figure class="concert-card-figure">
-                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800#afiche-slipknot-here-comes-the-pain.jpg"
-                                alt="Afiche del tour Here Comes The Pain de Slipknot en Movistar Arena"
-                                class="concert-card-image">
-                            <figcaption class="concert-card-caption">Concierto Heavy Metal • Movistar Arena</figcaption>
-                        </figure>
-                        <h2>Slipknot: Here Comes The Pain</h2>
-                        <p class="concert-info">15 de Noviembre - 21:00 HS</p>
-                        <p>Lugar: Movistar Arena, Buenos Aires</p>
-                    </section>
-                </article>
-
-                <!-- TARJETA 3: FOO FIGHTERS -->
-                <article class="col-12 col-md-4">
-                    <section class="card-interactive">
-                        <figure class="concert-card-figure">
-                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800#afiche-foo-fighters-take-cover-tour.jpg"
-                                alt="Afiche promocional oficial del tour Take Cover 2027 de Foo Fighters en Argentina"
-                                class="concert-card-image">
-                            <figcaption class="concert-card-caption">Recital de Rock • Estadio River Plate</figcaption>
-                        </figure>
-                        <h2>Foo Fighters: Take Cover Tour</h2>
-                        <p class="concert-info">25 de Febrero - 21:00 HS</p>
-                        <p>Lugar: Estadio River Plate, Buenos Aires</p>
-                    </section>
-                </article>
+        <div class="page-container">
+            <section class="content-section" aria-labelledby="proximos-titulo">
+                <h2 id="proximos-titulo">Shows destacados de la temporada</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-bts-arirang.webp" alt="Afiche oficial de BTS World Tour Arirang en Argentina con los siete integrantes y las fechas del 21, 23 y 24 de octubre de 2026 en el Estadio Único de La Plata" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">En cartel</span>
+                                <figcaption class="concert-card-caption">K-pop • Gira mundial</figcaption>
+                            </figure>
+                            <h3>BTS World Tour Arirang</h3>
+                            <p class="concert-info">21, 23 y 24 de octubre de 2026</p>
+                            <p>Lugar: Estadio Único de La Plata</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-hayley-williams.webp" alt="Afiche de The Hayley Williams Show en Latinoamérica con Annie DiRusso como invitada, el 15 de noviembre en el Estadio Malvinas Argentinas" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">Nuevo venue</span>
+                                <figcaption class="concert-card-caption">Pop rock alternativo • Invitada: Annie DiRusso</figcaption>
+                            </figure>
+                            <h3>The Hayley Williams Show</h3>
+                            <p class="concert-info">15 de noviembre de 2026</p>
+                            <p>Lugar: Estadio Malvinas Argentinas, Buenos Aires</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-foo-fighters-take-cover.webp" alt="Afiche del Take Cover Tour 2027 de Foo Fighters en el Estadio River Plate el 25 de febrero, con Usted Señalemelo y Pacifica como invitados" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">En cartel</span>
+                                <figcaption class="concert-card-caption">Rock • Invitados: Usted Señalemelo y Pacifica</figcaption>
+                            </figure>
+                            <h3>Foo Fighters: Take Cover Tour</h3>
+                            <p class="concert-info">25 de febrero de 2027</p>
+                            <p>Lugar: Estadio River Plate, Buenos Aires</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-lollapalooza-2027.webp" alt="Afiche naranja de Lollapalooza Argentina 2027 con el texto Tickets a la venta, fechas del 12 al 14 de marzo en el Hipódromo de San Isidro" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">A la venta</span>
+                                <figcaption class="concert-card-caption">Festival • Entradas a la venta</figcaption>
+                            </figure>
+                            <h3>Lollapalooza Argentina 2027</h3>
+                            <p class="concert-info">12, 13 y 14 de marzo de 2027</p>
+                            <p>Lugar: Hipódromo de San Isidro, Buenos Aires</p>
+                        </article>
+                    </div>
+                </div>
             </section>
-        </section>
+
+            <section class="content-section" aria-labelledby="agenda-titulo">
+                <h2 id="agenda-titulo">Agenda completa: 36 shows</h2>
+                <div class="agenda-toolbar">
+                    <div>
+                        <div class="chip-group" role="group" aria-label="Filtrar por género" data-filter-group="genre">
+                            <button type="button" class="chip is-active" data-value="all" aria-pressed="true">Todos</button>
+                            <button type="button" class="chip" data-value="Alternativo" aria-pressed="false">Alternativo</button>
+                            <button type="button" class="chip" data-value="Electrónica" aria-pressed="false">Electrónica</button>
+                            <button type="button" class="chip" data-value="Festival" aria-pressed="false">Festival</button>
+                            <button type="button" class="chip" data-value="Latino" aria-pressed="false">Latino</button>
+                            <button type="button" class="chip" data-value="Metal" aria-pressed="false">Metal</button>
+                            <button type="button" class="chip" data-value="Pop" aria-pressed="false">Pop</button>
+                            <button type="button" class="chip" data-value="Rock" aria-pressed="false">Rock</button>
+                            <button type="button" class="chip" data-value="Urbano" aria-pressed="false">Urbano</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="agenda-search" class="visually-hidden">Buscar artista o recinto</label>
+                        <input type="search" id="agenda-search" class="agenda-search" placeholder="Buscar artista o recinto..." autocomplete="off">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="chip-group" role="group" aria-label="Filtrar por ciudad" data-filter-group="city">
+                        <button type="button" class="chip is-active" data-value="all" aria-pressed="true">Todos</button>
+                        <button type="button" class="chip" data-value="Buenos Aires" aria-pressed="false">Buenos Aires</button>
+                        <button type="button" class="chip" data-value="Córdoba" aria-pressed="false">Córdoba</button>
+                        <button type="button" class="chip" data-value="La Plata" aria-pressed="false">La Plata</button>
+                        <button type="button" class="chip" data-value="Rosario" aria-pressed="false">Rosario</button>
+                    </div>
+                </div>
+                <p class="agenda-count" aria-live="polite">Mostrando <strong id="agenda-count-number">36</strong> shows</p>
+                <ol class="agenda-list" id="agenda-list">
+                    <li class="agenda-row" data-genre="Metal" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-20">
+                            <strong>20</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Iron Maiden</h3>
+                            <p class="concert-info agenda-row__meta">20 y 21 de octubre de 2026 &middot; Estadio Tomás A. Ducó (Huracán)</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Metal</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Pop" data-city="La Plata" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-21">
+                            <strong>21</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">BTS · World Tour Arirang</h3>
+                            <p class="concert-info agenda-row__meta">21, 23 y 24 de octubre de 2026 &middot; Estadio Único Diego A. Maradona</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Pop</span>
+                                <span class="tag tag--city">La Plata</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Electrónica" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-24">
+                            <strong>24</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Solomun</h3>
+                            <p class="concert-info agenda-row__meta">24 de octubre de 2026 &middot; Mandarine Park</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Electrónica</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-25">
+                            <strong>25</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Camilo</h3>
+                            <p class="concert-info agenda-row__meta">25 y 26 de octubre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Rosario" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-30">
+                            <strong>30</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Camilo</h3>
+                            <p class="concert-info agenda-row__meta">30 de octubre de 2026 &middot; Estadio Metropolitano</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Rosario</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Córdoba" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-10-31">
+                            <strong>31</strong>
+                            <span>OCT 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Camilo</h3>
+                            <p class="concert-info agenda-row__meta">31 de octubre de 2026 &middot; Estadio Mario A. Kempes</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Córdoba</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-01">
+                            <strong>1</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Jesse &amp; Joy</h3>
+                            <p class="concert-info agenda-row__meta">1 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-05">
+                            <strong>5</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Def Leppard</h3>
+                            <p class="concert-info agenda-row__meta">5 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-06">
+                            <strong>6</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Ronnie Wood</h3>
+                            <p class="concert-info agenda-row__meta">6 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Córdoba" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-06">
+                            <strong>6</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Jesse &amp; Joy</h3>
+                            <p class="concert-info agenda-row__meta">6 de noviembre de 2026 &middot; Quality Espacio</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Córdoba</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Córdoba" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-12">
+                            <strong>12</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Romeo Santos &amp; Prince Royce</h3>
+                            <p class="concert-info agenda-row__meta">12 de noviembre de 2026 &middot; Estadio Mario A. Kempes</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Córdoba</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Urbano" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-13">
+                            <strong>13</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">María Becerra</h3>
+                            <p class="concert-info agenda-row__meta">Varias fechas del 13 al 27 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Urbano</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-13">
+                            <strong>13</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Abel Pintos</h3>
+                            <p class="concert-info agenda-row__meta">Varias fechas del 13 al 20 de noviembre de 2026 &middot; Teatro Gran Rex</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-14">
+                            <strong>14</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Romeo Santos &amp; Prince Royce</h3>
+                            <p class="concert-info agenda-row__meta">14 de noviembre de 2026 &middot; Estadio Vélez Sarsfield</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Electrónica" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-14">
+                            <strong>14</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Creamfields</h3>
+                            <p class="concert-info agenda-row__meta">14 de noviembre de 2026 &middot; Parque de la Ciudad</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Electrónica</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Alternativo" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-15">
+                            <strong>15</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Hayley Williams</h3>
+                            <p class="concert-info agenda-row__meta">15 de noviembre de 2026 &middot; Estadio Malvinas Argentinas</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Alternativo</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-23">
+                            <strong>23</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Andrés Calamaro</h3>
+                            <p class="concert-info agenda-row__meta">23 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-24">
+                            <strong>24</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">ZZ Top</h3>
+                            <p class="concert-info agenda-row__meta">24 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Alternativo" data-city="Córdoba" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-26">
+                            <strong>26</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Gorillaz</h3>
+                            <p class="concert-info agenda-row__meta">26 de noviembre de 2026 &middot; Estadio Mario A. Kempes</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Alternativo</span>
+                                <span class="tag tag--city">Córdoba</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Alternativo" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-26">
+                            <strong>26</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Johnny Marr</h3>
+                            <p class="concert-info agenda-row__meta">26 de noviembre de 2026 &middot; Complejo C Art Media</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Alternativo</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Urbano" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-27">
+                            <strong>27</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">WOS</h3>
+                            <p class="concert-info agenda-row__meta">27 de noviembre de 2026 &middot; Estadio Obras Sanitarias</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Urbano</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Festival" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-28">
+                            <strong>28</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Primavera Sound Buenos Aires</h3>
+                            <p class="concert-info agenda-row__meta">28 y 29 de noviembre de 2026 &middot; Sede a confirmar con la organización</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Festival</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Pop" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-28">
+                            <strong>28</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Eros Ramazzotti</h3>
+                            <p class="concert-info agenda-row__meta">28 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Pop</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Pop" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-29">
+                            <strong>29</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Ed Sheeran</h3>
+                            <p class="concert-info agenda-row__meta">29 de noviembre de 2026 &middot; Estadio Tomás A. Ducó (Huracán)</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Pop</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Urbano" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-11-30">
+                            <strong>30</strong>
+                            <span>NOV 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Omar Courtz</h3>
+                            <p class="concert-info agenda-row__meta">30 de noviembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Urbano</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Metal" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-01">
+                            <strong>1</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Babymetal</h3>
+                            <p class="concert-info agenda-row__meta">1 de diciembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Metal</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Urbano" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-03">
+                            <strong>3</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Anuel AA</h3>
+                            <p class="concert-info agenda-row__meta">3, 5 y 6 de diciembre de 2026 &middot; Tecnópolis</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Urbano</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Pop" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-05">
+                            <strong>5</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Daniel Caesar</h3>
+                            <p class="concert-info agenda-row__meta">5 de diciembre de 2026 &middot; Estadio Obras Sanitarias</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Pop</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Latino" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-10">
+                            <strong>10</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Maná · Vivir Sin Aire Tour</h3>
+                            <p class="concert-info agenda-row__meta">10 de diciembre de 2026 &middot; Estadio River Plate</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Latino</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-10">
+                            <strong>10</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Deep Purple</h3>
+                            <p class="concert-info agenda-row__meta">10 de diciembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-10">
+                            <strong>10</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Divididos</h3>
+                            <p class="concert-info agenda-row__meta">10, 11, 15 y 17 de diciembre de 2026 &middot; Teatro Flores</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Pop" data-city="La Plata" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-12">
+                            <strong>12</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Tan Biónica</h3>
+                            <p class="concert-info agenda-row__meta">12 de diciembre de 2026 &middot; Estadio Único Diego A. Maradona</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Pop</span>
+                                <span class="tag tag--city">La Plata</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Urbano" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-12">
+                            <strong>12</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Dillom</h3>
+                            <p class="concert-info agenda-row__meta">12 de diciembre de 2026 &middot; Microestadio de Ferro</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Urbano</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Metal" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2026-12-14">
+                            <strong>14</strong>
+                            <span>DIC 2026</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Slayer + Kreator</h3>
+                            <p class="concert-info agenda-row__meta">14 de diciembre de 2026 &middot; Movistar Arena</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Metal</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Rock" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2027-02-25">
+                            <strong>25</strong>
+                            <span>FEB 2027</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Foo Fighters · Take Cover Tour</h3>
+                            <p class="concert-info agenda-row__meta">25 de febrero de 2027 &middot; Estadio River Plate</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Rock</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="agenda-row" data-genre="Festival" data-city="Buenos Aires" data-aos="fade-up">
+                        <time class="agenda-row__date" datetime="2027-03-12">
+                            <strong>12</strong>
+                            <span>MAR 2027</span>
+                        </time>
+                        <div>
+                            <h3 class="agenda-row__title">Lollapalooza Argentina 2027</h3>
+                            <p class="concert-info agenda-row__meta">12, 13 y 14 de marzo de 2027 &middot; Hipódromo de San Isidro</p>
+                            <div class="agenda-row__tags">
+                                <span class="tag tag--genre">Festival</span>
+                                <span class="tag tag--city">Buenos Aires</span>
+                                    <span class="tag tag--hot">Destacado</span>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <div class="agenda-empty" id="agenda-empty">
+                    <h3>No encontramos shows con esos filtros</h3>
+                    <p>Probá con otro género, otra ciudad o una búsqueda distinta.</p>
+                </div>
+                <p class="note-small">Fechas y recintos tomados de agendas y ticketeras públicas consultadas el 20 de octubre de 2026.
+                    Pueden cambiar: confirmá siempre en el canal oficial de la productora antes de comprar.</p>
+            </section>
+
+            <section class="content-section" aria-labelledby="archivo-titulo">
+                <h2 id="archivo-titulo">Del archivo de la cartelera</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-oasis-live-25.webp" alt="Afiche de Oasis Live 25 con los hermanos Gallagher, shows del 15 y 16 de noviembre de 2025 en el Estadio River Plate con entradas agotadas" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status badge-status--soldout">Agotado</span>
+                                <figcaption class="concert-card-caption">Rock británico • Entradas agotadas</figcaption>
+                            </figure>
+                            <h3>Oasis Live ’25</h3>
+                            <p class="concert-info">15 y 16 de noviembre de 2025</p>
+                            <p>Lugar: Estadio River Plate, Buenos Aires</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="../assets/img/poster-maroon-5.webp" alt="Afiche anaranjado de Maroon 5 con la banda posando y el aviso de cambio de sede al Movistar Arena el 3 de septiembre" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status badge-status--past">Cambio de sede</span>
+                                <figcaption class="concert-card-caption">Pop rock • Cambio de sede</figcaption>
+                            </figure>
+                            <h3>Maroon 5</h3>
+                            <p class="concert-info">3 de septiembre</p>
+                            <p>Lugar: Movistar Arena, Buenos Aires</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
-        <nav class="footer-nav" aria-label="Enlaces a redes sociales oficiales">
-            <ul class="footer-list">
-                <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Ir al perfil de Instagram de Concerts Week">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Icono de Instagram"
-                            class="social-icon">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Ir a la cuenta de Twitter de Concerts Week">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Icono de Twitter"
-                            class="social-icon">
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Ir al canal de YouTube de Concerts Week">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Icono de YouTube"
-                            class="social-icon">
-                        YouTube
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="footer-inner">
+            <section aria-labelledby="footer-marca">
+                <h2 class="footer-title" id="footer-marca">Concerts Week</h2>
+                <p>Tu agenda independiente de música en vivo en Argentina: conciertos, festivales y recitales, con
+                    fechas verificadas en fuentes oficiales.</p>
+            </section>
+            <nav aria-label="Mapa del sitio">
+                <h2 class="footer-title">Explorar</h2>
+                <ul class="footer-list footer-list--stack">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="conciertos.html">Próximos Conciertos</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería y Música</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Redes sociales de Concerts Week">
+                <h2 class="footer-title">Seguinos</h2>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el perfil en Instagram de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/instagram.svg" alt="Logo de Instagram" class="social-icon" width="20" height="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar la cuenta en X de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/x-twitter.svg" alt="Logo de X (Twitter)" class="social-icon" width="20" height="20">
+                            X (Twitter)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el canal en YouTube de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/youtube.svg" alt="Logo de YouTube" class="social-icon" width="20" height="20">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <button type="button" class="back-to-top" aria-label="Volver al inicio de la página">&uarr;</button>
+
+    <!-- Bootstrap JS (menú hamburguesa, carruseles y acordeón) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-    </script>
+    <!-- Interacciones propias -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

@@ -4,128 +4,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO On-Page -->
-    <title>Sobre Nosotros y Cobertura Periodística | Concerts Week</title>
-    <meta name="description"
-        content="Conoce la historia de Concerts Week, la plataforma independiente dedicada a promover la cultura de la música en vivo y la agenda de recitales.">
+    <!-- SEO on-page: title, description y keywords propios de cada página -->
+    <title>Sobre Nosotros: Historia y Compromiso | Concerts Week</title>
+    <meta name="description" content="Conocé la historia de Concerts Week, la plataforma independiente de música en vivo, y su compromiso con la seguridad y los datos verificados.">
+    <meta name="keywords" content="sobre nosotros, Concerts Week, historia, compromiso, seguridad en recitales, producción de shows, periodismo musical, misión">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sobre Nosotros: Historia y Compromiso | Concerts Week">
+    <meta property="og:description" content="Conocé la historia de Concerts Week, la plataforma independiente de música en vivo, y su compromiso con la seguridad y los datos verificados.">
+    <meta property="og:locale" content="es_AR">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- AOS Animation Library CDN -->
+    <!-- AOS (animaciones al hacer scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Estilos CSS Compilados desde SCSS -->
+    <!-- Estilos compilados desde SCSS -->
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Navegación principal del sitio">
-            <div class="container-fluid max-w-7xl">
-                <a class="navbar-brand brand-title" href="../index.html" aria-label="Concerts Week - Ir a inicio">
-                    Concerts<span class="brand-accent">Week</span>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Navegación principal del sitio">
+            <div class="container-fluid">
+                <a class="navbar-brand brand-title" href="../index.html" aria-label="Concerts Week - Ir al inicio">
+                    <span class="logo-mark" aria-hidden="true">
+                        <span class="logo-bars"><span></span><span></span><span></span><span></span></span>
+                    </span>
+                    <span>Concerts<span class="brand-accent">Week</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                     aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="conciertos.html">Próximos Conciertos</a></li>
-                        <li class="nav-item"><a class="nav-link active-page" href="nosotros.html"
-                                aria-current="page">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería y Música</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conciertos.html">Próximos Conciertos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-page" href="nosotros.html" aria-current="page">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galería y Música</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
     <main class="main-content">
-        <!-- ÚNICO H1 DEL ARCHIVO -->
-        <section class="content-section" data-aos="fade-down" data-aos-duration="800">
-            <article>
-                <h1>Sobre Concerts Week y Nuestra Misión</h1>
-                <p>Somos una plataforma independiente enfocada en impulsar la cultura de la música en directo y conectar
-                    a los fanáticos con sus bandas favoritas.</p>
-            </article>
+        <section class="page-hero" data-aos="fade-down">
+            <span class="eyebrow">Quiénes somos</span>
+            <h1>Sobre Concerts Week y Nuestra Misión</h1>
+            <p class="lead-text">Somos una plataforma independiente enfocada en impulsar la cultura de la música en directo y conectar a los fanáticos con sus bandas favoritas.</p>
         </section>
 
-        <section class="content-section" data-aos="fade-up" data-aos-duration="800">
-            <article>
-                <h2>Nuestra Historia y Trabajo de Campo</h2>
-                <p>Concerts Week nació para resolver la dispersión de información sobre shows musicales y recitales
-                    locales. Nos encargamos de verificar las fuentes oficiales para ofrecerte una agenda confiable
-                    semana a semana.</p>
-            </article>
+        <div class="page-container">
+            <section class="content-section" aria-labelledby="historia-titulo">
+                <div class="split-block">
+                    <figure class="split-block__media" data-aos="fade-right">
+                        <img src="../assets/img/galeria-luces-amarillas.webp" alt="Escenario iluminado con focos amarillos y el público al frente durante un recital" width="612" height="408" loading="lazy">
+                        <figcaption>Imagen ilustrativa: la luz de un escenario, donde empieza cada historia.</figcaption>
+                    </figure>
+                    <div data-aos="fade-left">
+                        <h2 id="historia-titulo">Nuestra historia</h2>
+                        <p>Concerts Week nació para resolver la dispersión de información sobre shows musicales y recitales
+                            locales: fechas en una red social, entradas en otra y cambios de sede en una tercera.</p>
+                        <p>Decidimos juntar todo en un solo lugar, con una regla simple: verificar las fuentes oficiales para
+                            ofrecerte una agenda confiable semana a semana.</p>
+                    </div>
+                </div>
+                <ol class="timeline">
+                    <li class="timeline__item" data-aos="fade-up">
+                        <span class="timeline__year">2024</span>
+                        <h3>La idea</h3>
+                        <p>Un grupo de fans cansados de buscar fechas en veinte pestañas distintas imagina una agenda única.</p>
+                    </li>
+                    <li class="timeline__item" data-aos="fade-up">
+                        <span class="timeline__year">2025</span>
+                        <h3>Primera agenda semanal</h3>
+                        <p>Se publica la primera cartelera con verificación de fuentes y aviso de cambios de sede y fechas agotadas.</p>
+                    </li>
+                    <li class="timeline__item" data-aos="fade-up">
+                        <span class="timeline__year">2026</span>
+                        <h3>Cobertura más federal</h3>
+                        <p>La agenda suma Córdoba, Rosario y La Plata, además de Buenos Aires, y se organiza por género y ciudad.</p>
+                    </li>
+                </ol>
+            </section>
 
-            <figure class="media-figure text-center my-4">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1000#equipo-periodistico-cobertura-recitales.jpg"
-                    alt="Consola de sonido técnica e instrumentos musicales durante la prueba de sonido antes de un recital"
-                    class="concert-card-image h-auto w-100">
-                <figcaption class="concert-card-caption mt-2">Equipo de producción y cobertura periodística en salas de
-                    conciertos locales.</figcaption>
-            </figure>
+            <section class="content-section" aria-labelledby="compromiso-titulo">
+                <h2 id="compromiso-titulo">Nuestro compromiso</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <article class="value-card">
+                            <div class="icon-bubble" aria-hidden="true">&#128737;</div>
+                            <h3>Seguridad primero</h3>
+                            <p>Difundimos recomendaciones de ingreso, salidas de emergencia y cuidado del público en cada show.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <article class="value-card">
+                            <div class="icon-bubble icon-bubble--cyan" aria-hidden="true">&#10003;</div>
+                            <h3>Datos verificados</h3>
+                            <p>Cada fecha se contrasta con la productora o la ticketera oficial antes de publicarse.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <article class="value-card">
+                            <div class="icon-bubble icon-bubble--pink" aria-hidden="true">&#9855;</div>
+                            <h3>Acceso para todos</h3>
+                            <p>Agenda abierta y gratuita, con información de accesibilidad de los recintos cuando está disponible.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <article class="value-card">
+                            <div class="icon-bubble" aria-hidden="true">&#127928;</div>
+                            <h3>Escena emergente</h3>
+                            <p>Las grandes giras conviven con artistas independientes y salas chicas.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-            <article>
-                <h2>Valores Principales del Proyecto</h2>
-                <ul class="feature-list">
-                    <li>Acceso libre y actualizado a la agenda de recitales.</li>
-                    <li>Difusión continua de artistas emergentes e independientes.</li>
-                    <li>Compromiso con el periodismo musical responsable y accesible.</li>
-                </ul>
-            </article>
-        </section>
+            <section class="content-section" aria-labelledby="produccion-titulo">
+                <div class="split-block split-block--reverse">
+                    <figure class="split-block__media" data-aos="fade-left">
+                        <img src="../assets/img/hero-escenario-estadio-rojo.webp" alt="Estadio repleto de público con el escenario iluminado en tonos rojos durante un recital" width="1280" height="770" loading="lazy">
+                        <figcaption>Imagen ilustrativa: producción de un recital en estadio.</figcaption>
+                    </figure>
+                    <div data-aos="fade-right">
+                        <h2 id="produccion-titulo">Producción y seguridad en cada show</h2>
+                        <p>Detrás de cada recital hay equipos de escenario, sonido, iluminación y seguridad. Por eso compartimos
+                            consejos para disfrutar con tranquilidad:</p>
+                        <ul class="check-list">
+                            <li><strong>Comprá solo en canales oficiales</strong> para evitar entradas falsas y reventa abusiva.</li>
+                            <li><strong>Llegá con tiempo:</strong> los controles de ingreso en estadios pueden demorar.</li>
+                            <li><strong>Ubicá las salidas de emergencia</strong> apenas entrás al recinto.</li>
+                            <li><strong>Hidratate y cuidá tus cosas</strong>, sobre todo en shows al aire libre.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" aria-labelledby="backstage-titulo">
+                <h2 id="backstage-titulo">Detrás de escena</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-item" data-aos="zoom-in">
+                        <img src="../assets/img/galeria-siluetas-humo.webp" alt="Siluetas de una banda en el escenario entre humo y estructuras de iluminación" width="870" height="580" loading="lazy">
+                        <figcaption>Escenario e iluminación</figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="../assets/img/prensa-camara-video.webp" alt="Cámara de video profesional sobre un trípode en una sala de transmisión" width="863" height="580" loading="lazy">
+                        <figcaption>Cobertura y registro</figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="../assets/img/galeria-estadio-unico.webp" alt="Panorámica de un estadio colmado de público frente al escenario con pantallas encendidas" width="770" height="515" loading="lazy">
+                        <figcaption>Público y recintos</figcaption>
+                    </figure>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="contacto.html" class="btn-custom">Trabajemos juntos</a>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
-        <nav class="footer-nav" aria-label="Enlaces a redes sociales oficiales">
-            <ul class="footer-list">
-                <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Página oficial de Instagram">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Icono de Instagram"
-                            class="social-icon">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Página oficial de Twitter">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="Icono de Twitter"
-                            class="social-icon">
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Canal oficial de YouTube">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Icono de YouTube"
-                            class="social-icon">
-                        YouTube
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="footer-inner">
+            <section aria-labelledby="footer-marca">
+                <h2 class="footer-title" id="footer-marca">Concerts Week</h2>
+                <p>Tu agenda independiente de música en vivo en Argentina: conciertos, festivales y recitales, con
+                    fechas verificadas en fuentes oficiales.</p>
+            </section>
+            <nav aria-label="Mapa del sitio">
+                <h2 class="footer-title">Explorar</h2>
+                <ul class="footer-list footer-list--stack">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="conciertos.html">Próximos Conciertos</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galeria.html">Galería y Música</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Redes sociales de Concerts Week">
+                <h2 class="footer-title">Seguinos</h2>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el perfil en Instagram de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/instagram.svg" alt="Logo de Instagram" class="social-icon" width="20" height="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar la cuenta en X de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/x-twitter.svg" alt="Logo de X (Twitter)" class="social-icon" width="20" height="20">
+                            X (Twitter)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el canal en YouTube de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="../assets/icons/youtube.svg" alt="Logo de YouTube" class="social-icon" width="20" height="20">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
+    <button type="button" class="back-to-top" aria-label="Volver al inicio de la página">&uarr;</button>
+
+    <!-- Bootstrap JS (menú hamburguesa, carruseles y acordeón) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-    </script>
+    <!-- Interacciones propias -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

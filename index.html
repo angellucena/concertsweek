@@ -4,103 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO On-Page: Title enfocado en palabras clave y localización -->
+    <!-- SEO on-page: title, description y keywords propios de cada página -->
     <title>Agenda de Conciertos y Recitales en Vivo | Concerts Week</title>
-    <!-- SEO On-Page: Meta Description atractiva con llamado a la acción -->
-    <meta name="description"
-        content="Descubre la agenda semanal de conciertos, recitales y festivales de música en vivo. Consulta fechas, recintos en Argentina y compra tus entradas oficiales.">
+    <meta name="description" content="Descubre la agenda semanal de conciertos, recitales y festivales de música en vivo. Consulta fechas, recintos en Argentina y entradas oficiales.">
+    <meta name="keywords" content="conciertos, recitales, agenda de conciertos, festivales, música en vivo, Argentina, entradas, cartelera semanal">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Agenda de Conciertos y Recitales en Vivo | Concerts Week">
+    <meta property="og:description" content="Descubre la agenda semanal de conciertos, recitales y festivales de música en vivo. Consulta fechas, recintos en Argentina y entradas oficiales.">
+    <meta property="og:locale" content="es_AR">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Librería de Animaciones AOS CDN -->
+    <!-- AOS (animaciones al hacer scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Estilos CSS Compilados desde SCSS -->
+    <!-- Estilos compilados desde SCSS -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR BOOTSTRAP NAVEGABLE Y ACCESIBLE -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Navegación principal del sitio">
-            <div class="container-fluid max-w-7xl">
-                <a class="navbar-brand brand-title" href="index.html"
-                    aria-label="Concerts Week - Ir a página de inicio">
-                    Concerts<span class="brand-accent">Week</span>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Navegación principal del sitio">
+            <div class="container-fluid">
+                <a class="navbar-brand brand-title" href="index.html" aria-label="Concerts Week - Ir al inicio">
+                    <span class="logo-mark" aria-hidden="true">
+                        <span class="logo-bars"><span></span><span></span><span></span><span></span></span>
+                    </span>
+                    <span>Concerts<span class="brand-accent">Week</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                     aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-                        <li class="nav-item"><a class="nav-link active-page" href="index.html"
-                                aria-current="page">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/conciertos.html">Próximos Conciertos</a>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link active-page" href="index.html" aria-current="page">Inicio</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="pages/nosotros.html">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/galeria.html">Galería y Música</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/conciertos.html">Próximos Conciertos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/galeria.html">Galería y Música</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <!-- CARRUSEL HERO PANORÁMICO -->
-    <section aria-label="Espectáculos y homenajes destacados de la semana">
-        <figure class="m-0">
+    <main class="main-content">
+        <!-- Carrusel héroe -->
+        <section aria-label="Espectáculos destacados de la temporada">
             <div id="heroCarousel" class="carousel slide carousel-fade carousel-hero" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Ver Diapositiva 1: Lollapalooza Argentina 2027"></button>
+                        aria-current="true" aria-label="Ver diapositiva 1: Lollapalooza Argentina 2027"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                        aria-label="Ver Diapositiva 2: Eternamente Gracias Leo Messi"></button>
+                        aria-label="Ver diapositiva 2: BTS World Tour Arirang"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                        aria-label="Ver Diapositiva 3: Foo Fighters Live"></button>
+                        aria-label="Ver diapositiva 3: Foo Fighters en River"></button>
                 </div>
                 <div class="carousel-inner">
-                    <!-- SLIDE 1: LOLLAPALOOZA -->
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600#concierto-lollapalooza-argentina-escenario.jpg"
-                            class="d-block w-100 carousel-img"
-                            alt="Escenario principal de Lollapalooza Argentina repleto de público con luces neón en el Hipódromo de San Isidro">
+                        <img src="assets/img/hero-lollapalooza-multitud.webp" alt="Multitud con los brazos en alto frente al escenario principal de un festival al atardecer" class="d-block w-100 carousel-img" width="1200" height="675">
                         <div class="carousel-hero-caption">
                             <p class="hero-display-title">Lollapalooza Argentina 2027</p>
-                            <p class="hero-display-subtitle">12, 13 y 14 de Marzo — Hipódromo de San Isidro | ¡Entradas
-                                a la Venta!</p>
-                            <a href="pages/conciertos.html" class="btn-custom mt-2">Comprar Entradas</a>
+                            <p class="hero-display-subtitle">12, 13 y 14 de marzo — Hipódromo de San Isidro | ¡Entradas a la venta!</p>
+                            <a href="pages/conciertos.html" class="btn-custom">Comprar entradas</a>
                         </div>
                     </div>
-                    <!-- SLIDE 2: ETERNAMENTE GRACIAS LEO MESSI -->
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="https://a.espncdn.com/photo/2022/1218/r1108256_1296x729_16-9.jpg#homenaje-lionel-messi-copa-del-mundo.jpg"
-                            referrerpolicy="no-referrer" class="d-block w-100 carousel-img"
-                            alt="Fotografía oficial de Lionel Messi levantando la Copa del Mundo Qatar 2022 vistiendo la bisht negra y la camiseta albiceleste de la Selección Argentina">
+                        <img src="assets/img/hero-escenario-estadio-rojo.webp" alt="Estadio repleto de público con el escenario iluminado en tonos rojos durante un recital" class="d-block w-100 carousel-img" width="1280" height="770" loading="lazy">
                         <div class="carousel-hero-caption">
-                            <p class="hero-display-title">¡Eternamente Gracias, Leo!</p>
-                            <p class="hero-display-subtitle">“Tropezar, volver a levantarse e intentarlo otra vez...
-                                Luchar por los sueños. Eso es la vida.” — Homenaje a Lionel Messi</p>
-                            <a href="pages/conciertos.html" class="btn-custom mt-2">Ver Homenaje</a>
+                            <p class="hero-display-title">BTS World Tour Arirang</p>
+                            <p class="hero-display-subtitle">21, 23 y 24 de octubre de 2026 — Estadio Único de La Plata</p>
+                            <a href="pages/conciertos.html" class="btn-custom">Ver fechas</a>
                         </div>
                     </div>
-                    <!-- SLIDE 3: FOO FIGHTERS -->
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600#foo-fighters-concierto-estadio-river.jpg"
-                            class="d-block w-100 carousel-img"
-                            alt="Show de rock masivo de Foo Fighters en el Estadio River Plate con fuegos artificiales e iluminación violeta">
+                        <img src="assets/img/hero-estadio-fuegos-bn.webp" alt="Fotografía en blanco y negro de un estadio colmado con fuegos artificiales sobre el escenario" class="d-block w-100 carousel-img" width="1600" height="1067" loading="lazy">
                         <div class="carousel-hero-caption">
-                            <p class="hero-display-title">Foo Fighters Live</p>
-                            <p class="hero-display-subtitle">Estadio River Plate — El show de rock alternativo más
-                                esperado del año</p>
-                            <a href="pages/conciertos.html" class="btn-custom mt-2">Explorar Fechas</a>
+                            <p class="hero-display-title">Foo Fighters en River</p>
+                            <p class="hero-display-subtitle">Take Cover Tour 2027 — 25 de febrero en el Estadio River Plate</p>
+                            <a href="pages/conciertos.html" class="btn-custom">Explorar cartelera</a>
                         </div>
                     </div>
                 </div>
@@ -109,77 +111,164 @@
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
-                    aria-label="Ir a la siguiente diapositiva">
+                    aria-label="Ir a la diapositiva siguiente">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
-            <figcaption class="visually-hidden">Carrusel dinámico con los espectáculos musicales y homenajes destacados
-                de la semana.</figcaption>
-        </figure>
-    </section>
+        </section>
 
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA DE INICIO -->
-    <main class="main-content">
-        <!-- ÚNICO H1 DEL ARCHIVO (REGLA DE SEO OBLIGATORIA) -->
-        <section class="content-section text-center py-4" data-aos="fade-down" data-aos-duration="800">
-            <article>
+        <div class="ticker" role="region" aria-label="Cinta con las próximas fechas destacadas">
+            <div class="ticker__track">
+                <span class="ticker__item"><b>21 OCT</b> BTS &middot; La Plata</span><span class="ticker__item"><b>15 NOV</b> Hayley Williams &middot; Buenos Aires</span><span class="ticker__item"><b>28 NOV</b> Primavera Sound Buenos Aires &middot; Buenos Aires</span><span class="ticker__item"><b>29 NOV</b> Ed Sheeran &middot; Buenos Aires</span><span class="ticker__item"><b>10 DIC</b> Maná &middot; Buenos Aires</span><span class="ticker__item"><b>25 FEB</b> Foo Fighters &middot; Buenos Aires</span><span class="ticker__item"><b>12 MAR</b> Lollapalooza Argentina 2027 &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>21 OCT</b> BTS &middot; La Plata</span><span class="ticker__item" aria-hidden="true"><b>15 NOV</b> Hayley Williams &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>28 NOV</b> Primavera Sound Buenos Aires &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>29 NOV</b> Ed Sheeran &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>10 DIC</b> Maná &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>25 FEB</b> Foo Fighters &middot; Buenos Aires</span><span class="ticker__item" aria-hidden="true"><b>12 MAR</b> Lollapalooza Argentina 2027 &middot; Buenos Aires</span>
+            </div>
+        </div>
+
+        <div class="page-container">
+            <section class="content-section content-section--center content-section--glow" data-aos="fade-down">
+                <span class="eyebrow">Agenda actualizada al 20 de octubre de 2026</span>
                 <h1>Agenda Semanal de Música y Recitales en Vivo</h1>
-                <p class="fs-5">Tu plataforma independiente para consultar cartelera de conciertos, festivales
-                    musicales, recintos e información de entradas oficiales en Argentina.</p>
-            </article>
-        </section>
+                <p class="lead-text">Tu plataforma independiente para consultar la cartelera de conciertos, festivales,
+                    recintos e información de entradas oficiales en Argentina.</p>
+                <a href="pages/conciertos.html" class="btn-custom mt-3">Ver agenda completa</a>
+            </section>
 
-        <section class="content-section" data-aos="fade-up" data-aos-duration="800">
-            <h2>Servicios para Amantes de la Música</h2>
-            <ul class="feature-list">
-                <li>Cartelera de shows actualizada diariamente por fechas, bandas y recintos.</li>
-                <li>Acceso directo a venta de tickets oficiales de AllAccess, TuEntrada y Ticketek.</li>
-                <li>Novedades exclusivas de la escena del rock, pop, metal, indie y música electrónica.</li>
-            </ul>
-        </section>
+            <section class="content-section" aria-labelledby="stats-titulo" data-aos="fade-up">
+                <h2 id="stats-titulo" class="visually-hidden">La agenda en números</h2>
+                <div class="stat-strip">
+                    <div class="stat-card"><strong>36</strong><span>Shows en agenda</span></div>
+                    <div class="stat-card"><strong>4</strong><span>Ciudades</span></div>
+                    <div class="stat-card"><strong>8</strong><span>Géneros</span></div>
+                    <div class="stat-card"><strong>100%</strong><span>Gratis</span></div>
+                </div>
+            </section>
+
+            <section class="content-section content-section--center" aria-labelledby="cuenta-titulo" data-aos="zoom-in">
+                <h2 id="cuenta-titulo">Cuenta regresiva: Foo Fighters en River</h2>
+                <p>25 de febrero de 2027 · Estadio River Plate · Take Cover Tour</p>
+                <div class="countdown" data-countdown="2027-02-25T21:00:00-03:00" role="timer" aria-label="Tiempo restante para el show de Foo Fighters">
+                    <div class="countdown__cell"><strong data-unit="d">--</strong><span>Días</span></div>
+                    <div class="countdown__cell"><strong data-unit="h">--</strong><span>Horas</span></div>
+                    <div class="countdown__cell"><strong data-unit="m">--</strong><span>Min</span></div>
+                    <div class="countdown__cell"><strong data-unit="s">--</strong><span>Seg</span></div>
+                </div>
+                <p class="note-small">Cuenta regresiva referencial: el horario exacto lo confirma la productora.</p>
+            </section>
+
+            <section class="content-section" aria-labelledby="destacados-titulo">
+                <h2 id="destacados-titulo" data-aos="fade-up">Lo más esperado</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="assets/img/poster-bts-arirang.webp" alt="Afiche oficial de BTS World Tour Arirang en Argentina con los siete integrantes y las fechas del 21, 23 y 24 de octubre de 2026 en el Estadio Único de La Plata" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">En cartel</span>
+                                <figcaption class="concert-card-caption">K-pop • Gira mundial</figcaption>
+                            </figure>
+                            <h3>BTS World Tour Arirang</h3>
+                            <p class="concert-info">21, 23 y 24 de octubre de 2026</p>
+                            <p>Lugar: Estadio Único de La Plata</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="assets/img/poster-foo-fighters-take-cover.webp" alt="Afiche del Take Cover Tour 2027 de Foo Fighters en el Estadio River Plate el 25 de febrero, con Usted Señalemelo y Pacifica como invitados" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">En cartel</span>
+                                <figcaption class="concert-card-caption">Rock • Invitados: Usted Señalemelo y Pacifica</figcaption>
+                            </figure>
+                            <h3>Foo Fighters: Take Cover Tour</h3>
+                            <p class="concert-info">25 de febrero de 2027</p>
+                            <p>Lugar: Estadio River Plate, Buenos Aires</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <article class="card-interactive">
+                            <figure class="concert-card-figure">
+                                <img src="assets/img/poster-lollapalooza-2027.webp" alt="Afiche naranja de Lollapalooza Argentina 2027 con el texto Tickets a la venta, fechas del 12 al 14 de marzo en el Hipódromo de San Isidro" class="concert-card-image" width="640" height="640" loading="lazy">
+                                <span class="badge-status">A la venta</span>
+                                <figcaption class="concert-card-caption">Festival • Entradas a la venta</figcaption>
+                            </figure>
+                            <h3>Lollapalooza Argentina 2027</h3>
+                            <p class="concert-info">12, 13 y 14 de marzo de 2027</p>
+                            <p>Lugar: Hipódromo de San Isidro, Buenos Aires</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-4" data-aos="zoom-in">
+                    <a href="pages/conciertos.html" class="btn-custom">Ver cartelera completa</a>
+                </div>
+            </section>
+
+            <section class="content-section" data-aos="fade-up">
+                <h2>Servicios para amantes de la música</h2>
+                <ul class="feature-list">
+                    <li>Cartelera de shows actualizada por fechas, bandas, géneros y ciudades.</li>
+                    <li>Acceso directo a la venta de tickets oficiales de AllAccess, TuEntrada y Ticketek.</li>
+                    <li>Novedades de la escena del rock, pop, metal, urbano y música electrónica.</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
-    <!-- PIE DE PÁGINA SEMÁNTICO -->
     <footer class="main-footer">
-        <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
-        <nav class="footer-nav" aria-label="Enlaces a redes sociales oficiales">
-            <ul class="footer-list">
-                <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Visitar nuestro perfil oficial en Instagram (se abre en una nueva pestaña)">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-                            alt="Icono de la red social Instagram" class="social-icon">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Visitar nuestra cuenta oficial en X / Twitter (se abre en una nueva pestaña)">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png"
-                            alt="Icono de la red social X / Twitter" class="social-icon">
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="Visitar nuestro canal oficial de YouTube (se abre en una nueva pestaña)">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-                            alt="Icono de la red social YouTube" class="social-icon">
-                        YouTube
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="footer-inner">
+            <section aria-labelledby="footer-marca">
+                <h2 class="footer-title" id="footer-marca">Concerts Week</h2>
+                <p>Tu agenda independiente de música en vivo en Argentina: conciertos, festivales y recitales, con
+                    fechas verificadas en fuentes oficiales.</p>
+            </section>
+            <nav aria-label="Mapa del sitio">
+                <h2 class="footer-title">Explorar</h2>
+                <ul class="footer-list footer-list--stack">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/conciertos.html">Próximos Conciertos</a></li>
+                    <li><a href="pages/nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="pages/galeria.html">Galería y Música</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Redes sociales de Concerts Week">
+                <h2 class="footer-title">Seguinos</h2>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el perfil en Instagram de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="assets/icons/instagram.svg" alt="Logo de Instagram" class="social-icon" width="20" height="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar la cuenta en X de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="assets/icons/x-twitter.svg" alt="Logo de X (Twitter)" class="social-icon" width="20" height="20">
+                            X (Twitter)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Visitar el canal en YouTube de Concerts Week (se abre en una pestaña nueva)">
+                            <img src="assets/icons/youtube.svg" alt="Logo de YouTube" class="social-icon" width="20" height="20">
+                            YouTube
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Concerts Week. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <!-- LIBRERÍAS JS -->
+    <button type="button" class="back-to-top" aria-label="Volver al inicio de la página">&uarr;</button>
+
+    <!-- Bootstrap JS (menú hamburguesa, carruseles y acordeón) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-    </script>
+    <!-- Interacciones propias -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
