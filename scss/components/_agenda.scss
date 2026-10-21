@@ -149,6 +149,70 @@
     display: none;
   }
 
+  // Banner del show (degradado según el género)
+  &__banner {
+    grid-column: 1 / -1;
+    min-height: 64px;
+    padding: 0 1rem;
+    overflow: hidden;
+    border-radius: $radius-md;
+    background: $gradient-brand;
+    @include flex-layout(row, flex-start, center, 0);
+    @include transition-smooth(filter, 0.3s);
+
+    span {
+      font-family: $font-heading;
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.5px;
+      color: $color-text-white;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &:hover &__banner {
+    filter: brightness(1.25);
+  }
+
+  &[data-genre="Metal"] &__banner {
+    background: $genre-metal;
+  }
+
+  &[data-genre="Rock"] &__banner {
+    background: $genre-rock;
+  }
+
+  &[data-genre="Pop"] &__banner {
+    background: $genre-pop;
+  }
+
+  &[data-genre="Urbano"] &__banner {
+    background: $genre-urbano;
+  }
+
+  &[data-genre="Electrónica"] &__banner {
+    background: $genre-electronica;
+  }
+
+  &[data-genre="Latino"] &__banner {
+    background: $genre-latino;
+  }
+
+  &[data-genre="Alternativo"] &__banner {
+    background: $genre-alternativo;
+  }
+
+  &[data-genre="Festival"] &__banner {
+    background: $genre-festival;
+  }
+
+  &__cta {
+    margin-top: 0.75rem;
+  }
+
   &__date {
     width: 76px;
     padding: 0.4rem 0;

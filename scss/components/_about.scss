@@ -144,3 +144,37 @@
     }
   }
 }
+
+// ---------- Tarjeta del equipo ----------
+.team-card {
+  max-width: 420px;
+  margin: 1rem auto 0;
+  padding: 1.5rem;
+  border: 1px solid $color-border-strong;
+  border-radius: $radius-lg;
+  background-color: $color-bg-soft;
+  @include transition-smooth(transform, 0.3s);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: $color-secondary;
+    box-shadow: 0 0 28px $glow-secondary;
+  }
+
+  p {
+    margin-bottom: 0.25rem;
+  }
+
+  &__avatar {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 1rem;
+    border-radius: $radius-full;
+    background: $gradient-brand;
+    color: $color-text-white;
+    font-family: $font-heading;
+    font-size: 1.9rem;
+    font-weight: 800;
+    @include flex-layout(row, center, center, 0);
+  }
+}

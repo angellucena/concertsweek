@@ -64,3 +64,13 @@ $bp-mobile-lg: 576px;
 $bp-tablet: 768px;
 $bp-desktop: 1024px;
 $bp-wide: 1400px;
+
+// Colores de banner por género (agenda)
+$genre-metal: linear-gradient(135deg, #7f1d1d, #000000);
+$genre-rock: linear-gradient(135deg, #1e3a8a, #000000);
+$genre-pop: linear-gradient(135deg, #be185d, #4c1d95);
+$genre-urbano: linear-gradient(135deg, #a16207, #000000);
+$genre-electronica: linear-gradient(135deg, #0e7490, #4c1d95);
+$genre-latino: linear-gradient(135deg, #c2410c, #831843);
+$genre-alternativo: linear-gradient(135deg, #5b21b6, #064e3b);
+$genre-festival: linear-gradient(135deg, #db2777, #d97706);

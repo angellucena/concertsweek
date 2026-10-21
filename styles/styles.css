@@ -1401,6 +1401,61 @@ a:focus-visible {
 .agenda-row.is-hidden {
   display: none;
 }
+.agenda-row__banner {
+  grid-column: 1 / -1;
+  min-height: 64px;
+  padding: 0 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  transition: filter 0.3s ease;
+}
+.agenda-row__banner span {
+  font-family: "Outfit", "Segoe UI", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.agenda-row:hover .agenda-row__banner {
+  filter: brightness(1.25);
+}
+.agenda-row[data-genre="Metal"] .agenda-row__banner {
+  background: linear-gradient(135deg, #7f1d1d, #000000);
+}
+.agenda-row[data-genre="Rock"] .agenda-row__banner {
+  background: linear-gradient(135deg, #1e3a8a, #000000);
+}
+.agenda-row[data-genre="Pop"] .agenda-row__banner {
+  background: linear-gradient(135deg, #be185d, #4c1d95);
+}
+.agenda-row[data-genre="Urbano"] .agenda-row__banner {
+  background: linear-gradient(135deg, #a16207, #000000);
+}
+.agenda-row[data-genre="Electrónica"] .agenda-row__banner {
+  background: linear-gradient(135deg, #0e7490, #4c1d95);
+}
+.agenda-row[data-genre="Latino"] .agenda-row__banner {
+  background: linear-gradient(135deg, #c2410c, #831843);
+}
+.agenda-row[data-genre="Alternativo"] .agenda-row__banner {
+  background: linear-gradient(135deg, #5b21b6, #064e3b);
+}
+.agenda-row[data-genre="Festival"] .agenda-row__banner {
+  background: linear-gradient(135deg, #db2777, #d97706);
+}
+.agenda-row__cta {
+  margin-top: 0.75rem;
+}
 .agenda-row__date {
   width: 76px;
   padding: 0.4rem 0;
@@ -1590,6 +1645,39 @@ a:focus-visible {
 }
 .check-list li strong {
   color: #ffffff;
+}
+.team-card {
+  max-width: 420px;
+  margin: 1rem auto 0;
+  padding: 1.5rem;
+  border: 1px solid #2c2c3a;
+  border-radius: 16px;
+  background-color: #08080b;
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: #ec4899;
+  box-shadow: 0 0 28px rgba(236, 72, 153, 0.28);
+}
+.team-card p {
+  margin-bottom: 0.25rem;
+}
+.team-card__avatar {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 1rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #ffffff;
+  font-family: "Outfit", "Segoe UI", Arial, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 .channel-grid {
   display: grid;

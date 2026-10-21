@@ -30,7 +30,7 @@
 
 ## 🎤 Contenido
 
-* **Cartelera:** 36 shows y festivales en Argentina (octubre 2026 – marzo 2027) con filtros por género y ciudad. Fuentes: agendas y ticketeras públicas consultadas el 20/10/2026. Las fechas pueden cambiar: confirmar siempre en el canal oficial de la productora.
+* **Cartelera:** 37 shows y festivales en Argentina (octubre 2026 – septiembre 2027) con filtros por género y ciudad. Fuentes: agendas y ticketeras públicas consultadas el 20/10/2026. Las fechas pueden cambiar: confirmar siempre en el canal oficial de la productora.
 * **Galería:** shows históricos por género con frase del artista (tomadas de la prensa argentina) o "dato del show" cuando no hay una cita verificada. Las fotos son ilustrativas del ambiente de un recital.
 * **Sobre nosotros:** la línea de tiempo del proyecto es narrativa y editable.
 
