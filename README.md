@@ -6,7 +6,7 @@
 
 ## 🔗 Enlaces del proyecto
 
-* **Repositorio público (GitHub):** https://github.com/angellucena/clase6
+* **Repositorio público (GitHub):** https://github.com/angellucena/concertsweek
 * **Sitio desplegado (Vercel / Netlify):** `PEGAR_AQUÍ_EL_LINK_DEL_DEPLOY`
 
 ---
