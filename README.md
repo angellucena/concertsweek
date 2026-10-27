@@ -7,8 +7,8 @@
 ## 🔗 Enlaces del proyecto
 
 * **Repositorio público (GitHub):** https://github.com/angellucena/concertsweek
-* **Sitio desplegado (Vercel / Netlify):*https://concertsweek.netlify.app/* 
 
+* **Sitio desplegado (Vercel / Netlify):** https://concertsweek.netlify.app/
 ---
 
 ## 🛠️ Tecnologías
